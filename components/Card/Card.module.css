@@ -1,0 +1,44 @@
+.title {
+  text-align: center;
+}
+
+.rateValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: $mantine-breakpoint-md) {
+    font-size: 4rem;
+  }
+}
+
+.rateContainer {
+  margin: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.currency {
+  height: 2rem;
+  width: 2rem;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.rateInput {
+  display: inline-block;
+  margin-left: 1rem;
+  width: 200px;
+}

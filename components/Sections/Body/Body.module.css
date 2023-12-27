@@ -1,0 +1,20 @@
+.title {
+  text-align: center;
+}
+
+.rateContainer {
+  margin: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
+}
+
+.rateInput {
+  display: inline-block;
+  margin-left: 1rem;
+  width: 200px;
+}
