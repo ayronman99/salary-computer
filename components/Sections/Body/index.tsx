@@ -3,7 +3,7 @@ import { Container, SimpleGrid, Text, Title, Select } from '@mantine/core';
 import { periods } from '@/data/periods';
 import TimeCard from '@/components/Card';
 import { Input } from '@mantine/core';
-import { IconCurrencyPeso } from '@tabler/icons-react';
+import { IconCurrencyPeso, IconInfoCircleFilled } from '@tabler/icons-react';
 import classes from './Body.module.css';
 
 const Body = () => {
@@ -14,7 +14,7 @@ const Body = () => {
 
   const amountSetter = (e: ChangeEvent<HTMLInputElement>) => {
     if (Number.isNaN(rateAmt)) {
-      setRateAmt(defaultRate);
+      setRateAmt(rateAmt);
     } else {
       setRateAmt(parseInt(e.target.value));
     }
@@ -30,18 +30,20 @@ const Body = () => {
 
   return (
     <div>
-      <Title className={classes.title} order={1} size="h2" my={15}>
-        Salary Computer
-      </Title>
-      <Container size={'xl'} style={{ border: '2px solid red' }}>
+      <Container size={'xl'}>
         <Container fluid className={classes.rateContainer}>
           <Select
-            label=" Enter your "
+            classNames={{
+              wrapper: classes.periodSelect,
+            }}
+            label="Enter your "
             placeholder="Pick value"
             data={periods.map((period) => period.period)}
             defaultValue="Daily"
             value={periodical}
             onChange={(evt) => nonNullPeriod(evt)}
+            size="sm"
+            radius="lg"
           />
           <Text span fw={700}>
             rate
@@ -54,6 +56,7 @@ const Body = () => {
             leftSection={<IconCurrencyPeso />}
           />
         </Container>
+
         <SimpleGrid
           cols={{ base: 1, sm: 2, lg: 3 }}
           spacing={{ base: 10, sm: 'xl' }}
@@ -66,7 +69,7 @@ const Body = () => {
               periodKey={key}
               method={periodical}
               period={period}
-              rate={rateAmt}
+              rate={rateAmt ?? 1}
             />
           ))}
         </SimpleGrid>

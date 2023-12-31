@@ -1,5 +1,15 @@
-.title {
+.title,
+.infoHolder {
   text-align: center;
+}
+
+.infoHolder {
+  padding: 1.25rem 0;
+}
+
+.subTitle {
+  padding-left: 1.15rem;
+  padding-right: 1.15rem;
 }
 
 .rateContainer {
@@ -7,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;
@@ -17,4 +28,10 @@
   display: inline-block;
   margin-left: 1rem;
   width: 200px;
+}
+
+.periodSelect {
+  display: flex;
+  margin: 0 1.25rem;
+  width: 140px;
 }

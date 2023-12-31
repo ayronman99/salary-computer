@@ -1,4 +1,5 @@
 .title {
+  text-align: center;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-size: rem(100px);
   font-weight: 900;
@@ -7,4 +8,9 @@
   @media (max-width: $mantine-breakpoint-md) {
     font-size: rem(50px);
   }
+}
+
+.infoHolder {
+  text-align: center;
+  padding: 1.25rem;
 }

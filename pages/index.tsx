@@ -7,8 +7,8 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      <Body />
       <Welcome />
+      <Body />
       <ColorSchemeToggle />
     </>
   );
