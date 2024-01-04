@@ -2,7 +2,7 @@ import { Card, Text, Title } from '@mantine/core';
 import classes from './Card.module.css';
 import { IconCurrencyPeso } from '@tabler/icons-react';
 import { periods } from '@/data/periods';
-import { methodFilter, periodCompute } from '@/utils/generic-utils';
+import { periodCompute } from '@/utils/generic-utils';
 type TimeCardProps = {
   method: string;
   period: string;
@@ -30,7 +30,7 @@ function TimeCard(props: TimeCardProps) {
       </Card.Section>
 
       <Text className={classes.title} fw={400} size="lg" mt="md">
-        Your {methodFilter(period)} rate is
+        Your {period} rate is
       </Text>
       <Text className={classes.rateValue} fw={700} mt="sm">
         <IconCurrencyPeso className={classes.currency} scale={100} />

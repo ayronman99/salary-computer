@@ -30,13 +30,16 @@ const Body = () => {
 
   return (
     <div>
-      <Container size={'xl'}>
+      <Container size={'xl'} p="md">
         <Container fluid className={classes.rateContainer}>
+          <Text span fw={700}>
+            Enter your
+          </Text>
           <Select
             classNames={{
               wrapper: classes.periodSelect,
             }}
-            label="Enter your "
+            // label="Enter your "
             placeholder="Pick value"
             data={periods.map((period) => period.period)}
             defaultValue="Daily"

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Container, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
+import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
 
 const links = [
   { link: '/about', label: 'Features' },
@@ -35,7 +36,7 @@ export function Header() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
+        <ColorSchemeToggle />
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>

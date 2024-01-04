@@ -8,13 +8,6 @@ export const capitalizedMethod = (method: string): string => {
   return returnMethod;
 };
 
-export const methodFilter = (method: string): string => {
-  return method === 'semimonthly'
-    ? `${method.slice(0, 4)}-${method.slice(4)}`
-    : `${method.slice(0)}`;
-};
-
 export const periodCompute = (rate: number, hours: number) => {
-  // {hours} is the hours for each working period
   return rate * hours;
 };
