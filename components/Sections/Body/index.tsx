@@ -12,14 +12,6 @@ const Body = () => {
   const [rateAmt, setRateAmt] = useState<number>(defaultRate);
   const [periodical, setpPeriodical] = useState<string>(defaultPeriod);
 
-  const amountSetter = (e: ChangeEvent<HTMLInputElement>) => {
-    if (Number.isNaN(rateAmt)) {
-      setRateAmt(rateAmt);
-    } else {
-      setRateAmt(parseInt(e.target.value));
-    }
-  };
-
   const nonNullPeriod = (evt: string | null) => {
     if (!evt || evt === null) {
       setpPeriodical(defaultPeriod);
@@ -55,7 +47,7 @@ const Body = () => {
             className={classes.rateInput}
             type="number"
             value={rateAmt}
-            onChange={amountSetter}
+            onChange={evt => setRateAmt(parseInt(evt.target.value))}
             leftSection={<IconCurrencyPeso />}
           />
         </Container>
