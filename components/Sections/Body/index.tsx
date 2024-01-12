@@ -1,9 +1,9 @@
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import { Container, SimpleGrid, Text, Title, Select } from '@mantine/core';
 import { periods } from '@/data/periods';
 import TimeCard from '@/components/Card';
 import { Input } from '@mantine/core';
-import { IconCurrencyPeso, IconInfoCircleFilled } from '@tabler/icons-react';
+import { IconCurrencyPeso } from '@tabler/icons-react';
 import classes from './Body.module.css';
 
 const Body = () => {
@@ -47,7 +47,7 @@ const Body = () => {
             className={classes.rateInput}
             type="number"
             value={rateAmt}
-            onChange={evt => setRateAmt(parseInt(evt.target.value))}
+            onChange={(evt) => setRateAmt(parseInt(evt.target.value))}
             leftSection={<IconCurrencyPeso />}
           />
         </Container>

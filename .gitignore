@@ -131,5 +131,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 .yarn.lock
-.yarnrc.yml
 .DS_Store
